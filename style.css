@@ -462,11 +462,11 @@ font-size :25px;
 }
 /* paralux start here */
 #parallax-section{
-    background-image:url("file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/Sample project - Acme/parallax.jpg");
-    background-repeat:no repeat;
+    background-image: url("image/photo.jpg");
+    background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
-    background-attechment: fixed;
+    background-attachment: fixed;
     padding :80px 0;
     margin-bottom:400px;
 }
@@ -485,7 +485,7 @@ font-size :25px;
 }
 .parallax-single-item h2{
     font-size:30px;
-    margin:20px 0;
+    margin:20px 0;	
 }
 /* block item code start here*/
 .blog-container{
