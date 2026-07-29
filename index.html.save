@@ -192,7 +192,7 @@
  <div class="pricing-area-parent"> 
     <div class="single-card">
       <div class="single-card-img"> 
-          <img src="image/JavaScript-logo.png">
+    <img src="image/JavaScript-logo.png" alt="JavaScript Logo">
 
        </div>
       <h3>JavaScript</h3>
@@ -206,9 +206,7 @@
             </div>
      <div class="single-card">     
       <div class="single-card-img" > 
-    <img src="image/js-logo.jpg">
-
-
+          <img src=" file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/Sample project - Acme/JavaScript-logo.png.jpg.jpg">
        </div>
       <h3>c++</h3>
       <p> shakespeare was the greatest poet in England he was the lecturer during his time</p>
@@ -221,8 +219,7 @@
   </div>
         <div class="single-card">
              <div class="single-card-img"> 
-    <img src="image/1280px-Python-logo-notext.svg.png">
-
+          <img src=" file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/Sample project - Acme/1280px-Python-logo-notext.svg.png">
        </div>
       <h3>python</h3>
       <p> shakespeare was the greatest poet in England he was the lecturer during his time</p>
@@ -246,8 +243,7 @@
  <div class="testo-singlecard-parent">
             <div class="testo-singlecard">
 <div class="testo-image-div">
-    <img src="./image/testimonials.1.jpg" alt="John Doe Profile">
-
+                    <img src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/Sample project - Acme/testimonials.1.jpg.jpg" alt="">
                 </div>
                 <div>
      <span class="testo-span"> John doe </span>  
