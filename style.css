@@ -462,7 +462,7 @@ font-size :25px;
 }
 /* paralux start here */
 #parallax-section{
-    background-image: url('../image/parallax.jpg');
+    background-image: url('./image/parallax.jpg');
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
