@@ -689,7 +689,7 @@ justify-content: space-between;
 .footer-menuitem ul li a{
     text-decoration: none;
     font-size: 20px;
-    fnont-weight: bold;
+    font-weight: bold;
     color: gray;
 }
 .footer-menuitem p{
