@@ -190,24 +190,23 @@ visibility: hidden;
      transform:rotate(360deg);
  }
  /*first section code here*/
- #first-containar{
- 
- width:900px;
- margin: auto;
-justify-content: space-between;
-padding:45px;
-display: flex;
-     
- }
- .learn-programing{
-     width:285px;
-     text-align: center;
-     padding:25px 5px;
-     transition:0.5s;
- }
- .learn-programing>I{
- font-size :50px;
- }
+ #first-container{
+    width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 45px;
+}
+
+.learn-programing{
+    width: 285px;
+    text-align: center;
+    padding: 25px 5px;
+}
+
+.learn-programing i{
+    font-size: 50px;
+}
   .learn-programing>h2{
       margin:15px 0px;
       
