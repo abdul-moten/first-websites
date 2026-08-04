@@ -132,7 +132,8 @@ visibility: hidden;
  }
  
  .header-container>h1{
- width:500px;
+     width:90%;
+ max-width:500px;
  margin: 20px auto;
  color: white;
  font-size:50px;
