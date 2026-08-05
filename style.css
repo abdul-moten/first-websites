@@ -98,9 +98,9 @@ visibility: hidden;
  .submenu>li:hover{
  background-color: blue;
   }
-  .submenu>li first-child>{
-      border-top:1px solid white;
-  }
+  .submenu > li:first-child{
+    border-top: 1px solid white;
+}
  .submenu>li{
  list-style: none;
      padding:10px 0px;
