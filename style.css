@@ -57,7 +57,7 @@ visibility: hidden;
      box-shadow:10px 10px 8px black;
      transition:0.5s;
      transform: scaleY(0);
-     transform-origin: top;
+     
  }
  .dropdown>li{
      list-style: none;
@@ -95,6 +95,7 @@ visibility: hidden;
     box-shadow:10px 10px 8px black;
     transition:0.5s;
   transform: scaleY(0);
+     transform-origin: top;
      
  }
  .submenu>li:hover{
