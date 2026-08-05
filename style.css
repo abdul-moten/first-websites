@@ -127,12 +127,12 @@ visibility: hidden;
  background-size:cover;
  background-position: center;
      text-align:center; 
-    min-height: 100vh;
+    height: 60vh;
 }
  
  
  .header-container{
-     padding-top:150px;
+     padding-top:60px;
  }
  
  .header-container>h1{
