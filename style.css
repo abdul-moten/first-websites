@@ -124,7 +124,8 @@ visibility: hidden;
  background-size:cover;
  background-position: center;
      text-align:center; 
-     height:90vh;
+    min-height: 100vh;
+}
  }
  
  .header-container{
