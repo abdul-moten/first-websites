@@ -113,9 +113,9 @@ visibility: hidden;
      text-decoration:none;
      color: white;
  }
-#navigation ul li:hover > ul.submenu{
-    opacity:1;
-    visibility:visible;
+.dropdown > li:hover > .submenu{
+    opacity: 1;
+    visibility: visible;
     transform: scaleY(1);
 }
  
