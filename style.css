@@ -67,10 +67,10 @@ visibility: hidden;
  .dropdown >li:hover{
      background-color: brown;
  }
+ .dropdown > li:first-child{
+    border-top: 1px solid white;
+}
  
- .dropdown>li: first-child>{
-     border-top:1px  solid white;
- }
  .dropdown>li>a{
      text-decoration: none;
      color: white;
