@@ -120,7 +120,7 @@ visibility: hidden;
 }
  
  /*hero area code start here*/
- 
+ @media(max-width:768px){
  #main-header{
  background-image: linear-gradient(rgba(0,0,0,0.164),rgba(0,0,0,0.664)),url("image/Hero.jpg");
  background-repeat:no-repeat;
@@ -129,7 +129,7 @@ visibility: hidden;
      text-align:center; 
     height: 60vh;
 }
- 
+ }
  
  .header-container{
      padding-top:60px;
