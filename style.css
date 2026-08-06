@@ -541,7 +541,7 @@ font-size :25px;
 
     background: rgba(0,0,0,0.5); /* কালো transparent background */
     opacity: 0;
-    transform-scale:(0.8);
+    transform:scale(0.8);
     transition: 0.5s;
 }
 
