@@ -534,19 +534,19 @@ font-size :25px;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;   /* নতুন */
     text-align: center;
     color: white;
     font-size: 25px;
 
-    background: rgba(0,0,0,0.5); /* কালো transparent background */
+    background: rgba(0,0,0,0.5);
     opacity: 0;
-    transform:scale(0.8);
+    transform: scale(0.8);
     transition: 0.5s;
+    z-index: 10;           /* নতুন */
 }
-
-
 
 .blog-icons i{
     font-size :40px;
