@@ -127,7 +127,7 @@ visibility: hidden;
  background-size:cover;
  background-position: center;
      text-align:center; 
-    height: 60vh;
+    min-height: 100vh;
 }
  }
  
