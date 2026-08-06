@@ -524,8 +524,9 @@ font-size :25px;
     overflow: hidden;
 }
 .blog-image-icon-div:hover .blog-icons{
-    opacity:1;
-    }
+    opacity: 1;
+    transform: scale(1);
+}
 .blog-icons{
     position: absolute;
     top: 0;
@@ -552,9 +553,6 @@ font-size :25px;
     margin-bottom: 20px;
     
 }
-.blog-image-icon-div:hover .blog-icons{
-    transform: scale(1);
-} 
 .single-item-text{
     text-align: center;
     margin:10px 0;
