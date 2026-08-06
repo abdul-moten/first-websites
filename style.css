@@ -516,7 +516,10 @@ font-size :25px;
     height: 250px;
     transition: 0.5s;
 }
-
+.blog-image-icon-div{
+    position: relative;
+    overflow: hidden;
+}
 .blog-image-icon-div:hover .blog-icons{
     opacity: 1;
     }
