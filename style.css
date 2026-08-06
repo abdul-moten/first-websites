@@ -553,7 +553,7 @@ font-size :25px;
     
 }
 .blog-image-icon-div:hover .blog-icons{
-    transform: scale(1.2);
+    transform: scale(1);
 } 
 .single-item-text{
     text-align: center;
