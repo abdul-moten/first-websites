@@ -131,11 +131,11 @@ visibility: hidden;
 }
  }
  
- .header-container{
+ .hero-container{
      padding-top:60px;
  }
  
- .header-container>h1{
+ .hero-container>h1{
      width:90%;
  max-width:500px;
  margin:  auto;
@@ -146,7 +146,7 @@ visibility: hidden;
 background-color: rgba(2,68,134,0.671);
      
  }
- .header-container>button{
+ .hero-container>button{
      font-size:18px;
      padding: 15px 25px;
      margin-top:20px;
@@ -158,16 +158,16 @@ background-color: rgba(2,68,134,0.671);
      cursor:pointer;
      transition:1s;
  }
- .header-container>button:hover{
+ .hero-container>button:hover{
      background-color:rgba(0,0,0,0.192);
  }
  
- .header-container>h4{
+ .hero-container>h4{
      font-size:35px;
      color: black;
  }
  
- .header-container>h5{
+ .hero-container>h5{
      font-size:35px;
      color: white;
      margin-bottom:50px;
