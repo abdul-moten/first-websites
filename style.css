@@ -26,12 +26,12 @@ align-items: center;
 text-decoration:none;
     color:  white;
     font-size:18px ;
-    border-right:1px white;
+    border-right:1px solid white;
     padding:16px 20px;
-    transition:0.5s
+    transition:0.5s;
    }
   #navigation>ul>li:first-child>a{
-      border-left:20px
+      border-left:1px solid white;
   }
   #navigation>ul>li:hover>a{
       background-color:dodgerblue;
