@@ -521,7 +521,7 @@ font-size :25px;
     overflow: hidden;
 }
 .blog-image-icon-div:hover .blog-icons{
-    opacity: 1;
+    opacity:1;
     }
 .blog-icons{
     position: absolute;
@@ -549,7 +549,7 @@ font-size :25px;
     
 }
 .blog-image-icon-div:hover .blog-icons{
-    transform: scale(1.6);
+    transform: scale(1.2);
 } 
 .single-item-text{
     text-align: center;
