@@ -76,6 +76,10 @@ visibility: hidden;
  .dropdown>li>a{
      text-decoration: none;
      color: white;
+     .dropdown > li > a{
+    display: block;
+    padding: 12px 20px;
+}
  }
   #navigation >ul >li:hover >ul{
      opacity:1;
