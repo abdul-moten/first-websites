@@ -72,14 +72,13 @@ visibility: hidden;
  .dropdown > li:first-child{
     border-top: 1px solid white;
 }
- 
- .dropdown>li>a{
-     text-decoration: none;
-     color: white;
-     .dropdown > li > a{
+ .dropdown > li > a{
     display: block;
     padding: 12px 20px;
+    text-decoration: none;
+    color: white;
 }
+
  }
   #navigation >ul >li:hover >ul{
      opacity:1;
