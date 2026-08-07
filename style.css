@@ -46,81 +46,91 @@ text-decoration:none;
         font-size:30px;
     }
   /*--dropdown menu code start heare--*/
- .dropdown{
-opacity:0;
-visibility: hidden;
-     background-color: green;
-     text-align: center;
-     margin-top:15px;
-     width:190px;
-     position: absolute;
-     box-shadow:10px 10px 8px black;
-     transition:0.5s;
-     transform: scaleY(0);
-     
- }
- .dropdown>li{
-     list-style: none;
-     padding:10px 0px;
-     border-bottom:1px  solid white;
-     position: relative;
- }
- 
- .dropdown >li:hover{
-     background-color: brown;
- }
- .dropdown > li:first-child{
+ /* ১. শুরুতে .dropdown সিলেক্টর যুক্ত করা হয়েছে */
+.dropdown {
+    opacity: 0;
+    visibility: hidden;
+    background-color: green;
+    text-align: center;
+    margin-top: 15px;
+    width: 190px;
+    position: absolute;
+    box-shadow: 10px 10px 8px black;
+    transition: 0.5s;
+    transform: scaleY(0);
+    transform-origin: top; /* অ্যানিমেশন সঠিকভাবে ওপর থেকে নিচে নামার জন্য */
+}
+
+.dropdown > li {
+    list-style: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
+    position: relative;
+}
+
+.dropdown > li:hover {
+    background-color: brown;
+}
+
+.dropdown > li:first-child {
     border-top: 1px solid white;
 }
- .dropdown > li > a{
+
+.dropdown > li > a {
     display: block;
     padding: 12px 20px;
     text-decoration: none;
     color: white;
 }
 
- }
-  #navigation >ul >li:hover >ul{
-     opacity:1;
-     visibility: visible;
-     transform: scaleY(1)
- }
- .submenu{
-    opacity:0;
-    visibility: hidden;
-    background-color: blue;
-    text-align: center;
-    margin-top:15px;
-    width :190px;
-    position: absolute;
-    top:0;
-    left: 100%;
-    box-shadow:10px 10px 8px black;
-    transition:0.5s;
-  transform: scaleY(0);
-     transform-origin: top;
-     
- }
- .submenu>li:hover{
- background-color: blue;
-  }
-  .submenu > li:first-child{
-    border-top: 1px solid white;
-}
- .submenu>li{
- list-style: none;
-     padding:10px 0px;
-     border-bottom:1px solid white;
- }
- .submenu>li>a{
-     text-decoration:none;
-     color: white;
- }
-.dropdown > li:hover > .submenu{
+/* ২. অহেতুক ব্র্যাকেট তুলে ফেলা হয়েছে এবং সেমিকোলন দেওয়া হয়েছে */
+#navigation > ul > li:hover > ul {
     opacity: 1;
     visibility: visible;
     transform: scaleY(1);
 }
+
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    background-color: blue;
+    text-align: center;
+    margin-top: 15px;
+    width: 190px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    box-shadow: 10px 10px 8px black;
+    transition: 0.5s;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.submenu > li:hover {
+    background-color: blue;
+}
+
+.submenu > li:first-child {
+    border-top: 1px solid white;
+}
+
+.submenu > li {
+    list-style: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
+}
+
+.submenu > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown > li:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+
  
  /*hero area code start here*/
  
