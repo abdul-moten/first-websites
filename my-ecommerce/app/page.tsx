@@ -5,17 +5,19 @@ export default function EcommerceFeatures() {
     <div className="max-w-7xl mx-auto px-4 py-8 space-y-12">
       
       {/* ১. হিরো ব্যানার সেকশন (Hero Banner) */}
-      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-teal-800 to-slate-900 text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
+      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-teal-800 to-slate-900 text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-4 max-w-xl">
           <span className="bg-teal-500 text-xs px-3 py-1 rounded-full font-semibold uppercase">বিশেষ অফার</span>
           <h1 className="text-3xl md:text-5xl font-bold leading-tight">আপনার পছন্দের সব পণ্য এখন এক জায়গায়!</h1>
           <p className="text-gray-200">সর্বোত্তম গুণমান, দ্রুত ডেলিভারি এবং সেরা দামে প্রযুক্তি ও ফ্যাশনের সর্বশেষ কালেকশন।</p>
           <button className="bg-lime-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-lime-300 transition">অফারগুলি দেখুন &rarr;</button>
         </div>
-        <div className="mt-6 md:mt-0">
-          <div className="w-64 h-48 bg-teal-700/50 rounded-xl border border-teal-500 flex items-center justify-center text-teal-200">
-            [ ব্যানার ইমেজ / স্লাইডার ]
-          </div>
+        <div className="mt-6 md:mt-0 flex-shrink-0">
+          <img 
+            src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=500&q=80" 
+            alt="Hero Banner" 
+            className="w-full max-w-xs h-48 object-cover rounded-xl border-2 border-teal-500 shadow-lg"
+          />
         </div>
       </section>
 
@@ -72,9 +74,13 @@ export default function EcommerceFeatures() {
       </section>
 
       {/* ৬. প্রোডাক্ট ডিটেইলস লেআউট (Product Details Preview) */}
-      <section className="grid md:grid-cols-2 gap-8 border rounded-xl p-6">
-        <div className="bg-gray-200 h-64 rounded-xl flex items-center justify-center text-gray-500">
-          [ প্রোডাক্টের গ্যালারি ছবি ]
+      <section className="grid md:grid-cols-2 gap-8 border rounded-xl p-6 items-center">
+        <div className="w-full h-64 rounded-xl overflow-hidden bg-gray-100">
+          <img 
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" 
+            alt="Smart Watch" 
+            className="w-full h-full object-cover rounded-xl"
+          />
         </div>
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">স্মার্ট ওয়াচ ব্লুটুথ কলিং</h2>
