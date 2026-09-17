@@ -1,107 +1,133 @@
-'use client';
+import React, { useState } from 'react';
 
-import Navbar from '@/components/Navbar';
-import { products } from '@/data/products';
-import { useCartStore } from '@/store/useCartStore';
-import { ArrowLeft, ShoppingBag, Star, Truck, ShieldCheck } from 'lucide-react';
-import Link from 'next/link';
-import { useParams } from 'next/navigation';
-import { useState } from 'react';
-
-export default function ProductDetailPage() {
-  const params = useParams();
-  const productId = params.id as string;
-  const product = products.find((p) => p.id === productId);
-  const addToCart = useCartStore((state) => state.addToCart);
-  const [added, setAdded] = useState(false);
-
-  if (!product) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <Navbar />
-        <div className="max-w-md mx-auto py-20 text-center">
-          <h2 className="text-xl font-bold text-gray-800">প্রোডাক্টটি পাওয়া যায়নি!</h2>
-          <Link href="/" className="mt-4 inline-block text-blue-600 font-medium hover:underline">
-            হোম পেজে ফিরে যান
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
-  const handleAddToCart = () => {
-    addToCart(product);
-    setAdded(true);
-    setTimeout(() => setAdded(false), 1500);
-  };
+export default function ProductPage() {
+  const [weight, setWeight] = useState('500 GM');
+  const [quantity, setQuantity] = useState(1);
 
   return (
-    <div className="min-h-screen bg-gray-50/50">
-      <Navbar />
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 mb-6">
-          <ArrowLeft className="w-4 h-4" /> হোম পেজে ফিরে যান
-        </Link>
-
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 lg:p-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Product Image */}
-          <div className="aspect-square bg-gray-50 rounded-xl overflow-hidden flex items-center justify-center border border-gray-100">
-            <img src={product.image} alt={product.title} className="object-cover w-full h-full" />
+    <div className="min-h-screen bg-gray-50 text-gray-800">
+      {/* ১. টপ কন্টাক্ট হেডার */}
+      <header className="bg-white border-b sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center space-x-2">
+            <span className="text-2xl font-bold text-amber-600">HONEY</span>
           </div>
 
-          {/* Product Info */}
-          <div className="flex flex-col justify-between space-y-6">
+          <div className="flex-1 max-w-md mx-4">
+            <div className="relative">
+              <input 
+                type="text" 
+                placeholder="Search for products..." 
+                className="w-full pl-4 pr-10 py-2 border rounded-full text-sm focus:outline-none focus:ring-1 focus:ring-amber-500"
+              />
+              <span className="absolute right-3 top-2.5 text-gray-400 text-sm">🔍</span>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-6 text-sm font-medium text-gray-700">
+            <span className="hidden md:inline hover:text-amber-600 cursor-pointer">সকল প্রোডাক্ট</span>
+            <span className="hidden md:inline hover:text-amber-600 cursor-pointer">ঝুড়ি</span>
+            <span className="hidden md:inline hover:text-amber-600 cursor-pointer">অ্যাকাউন্ট</span>
+            <span className="text-red-600 font-bold flex items-center gap-1">
+              📞 +880 1766 631964
+            </span>
+          </div>
+        </div>
+
+        {/* ক্যাটাগরি মেনু বার */}
+        <nav className="bg-black text-white px-4 py-2 text-sm overflow-x-auto">
+          <div className="max-w-7xl mx-auto flex space-x-6 whitespace-nowrap justify-center">
+            {['Dry Fruits', 'Honey', 'Nuts', 'Oil', 'Pickle-Chutney', 'Seeds', 'Spice'].map((item, idx) => (
+              <a key={idx} href="#" className="hover:text-amber-400 transition">{item}</a>
+            ))}
+          </div>
+        </nav>
+      </header>
+
+      {/* ২. প্রোডাক্ট প্রধান সেকশন */}
+      <main className="max-w-6xl mx-auto px-4 py-8">
+        <div className="bg-white rounded-xl shadow-sm border p-6 grid md:grid-cols-2 gap-8 items-start">
+          
+          {/* বামপাশ: প্রোডাক্ট ইমেজ */}
+          <div className="flex justify-center bg-gray-50 p-6 rounded-xl border">
+            <img 
+              src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=600&q=80" 
+              alt="Black Seed Flower Raw Honey" 
+              className="max-h-96 object-contain rounded-lg shadow-md"
+            />
+          </div>
+
+          {/* ডানপাশ: প্রোডাক্ট ডিটেইলস */}
+          <div className="space-y-6">
             <div>
-              <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-full">
-                {product.category}
-              </span>
-              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">{product.title}</h1>
-              
-              <div className="flex items-center gap-2 mt-2">
-                <div className="flex items-center text-amber-400">
-                  <Star className="w-4 h-4 fill-current" />
-                  <span className="text-sm font-bold text-gray-800 ml-1">{product.rating}</span>
-                </div>
-                <span className="text-gray-300">•</span>
-                <span className="text-sm text-gray-500">ইন স্টকে আছে</span>
-              </div>
-
-              <div className="text-3xl font-extrabold text-blue-600 mt-4">
-                ৳{product.price.toLocaleString('bn-BD')}
-              </div>
-
-              <p className="text-gray-600 mt-4 text-sm sm:text-base leading-relaxed">
-                {product.description}
+              <h1 className="text-2xl md:text-3xl font-bold text-amber-700 leading-snug">
+                কালোজিরা ফুলের মধু (Black Seed Flower Raw Honey)
+              </h1>
+              <p className="text-2xl font-bold text-gray-900 mt-2">
+                ৳৭০০ – ৳১,৩৯০
               </p>
             </div>
 
-            {/* Features */}
-            <div className="border-t border-gray-100 pt-4 space-y-3">
-              <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Truck className="w-5 h-5 text-blue-600" />
-                <span>সারা দেশে হোম ডেলিভারি সুযোগ</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm text-gray-600">
-                <ShieldCheck className="w-5 h-5 text-blue-600" />
-                <span>১০০% প্রিমিয়াম ও আসল প্রোডাক্টের নিশ্চয়তা</span>
+            {/* সাইজ / ওজন সিলেক্টর */}
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-gray-700">ওজন নির্বাচন করুন:</label>
+              <div className="flex gap-3">
+                {['500 GM', '1000 GM'].map((option) => (
+                  <button
+                    key={option}
+                    onClick={() => setWeight(option)}
+                    className={`px-4 py-2 text-sm font-semibold rounded-md border transition ${
+                      weight === option 
+                        ? 'bg-black text-white border-black' 
+                        : 'bg-gray-100 text-gray-800 border-gray-300 hover:bg-gray-200'
+                    }`}
+                  >
+                    {option}
+                  </button>
+                ))}
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="pt-2">
-              <button
-                onClick={handleAddToCart}
-                className={`w-full py-3.5 px-6 rounded-xl font-bold text-base flex items-center justify-center gap-2 transition-all duration-200 shadow-md ${
-                  added
-                    ? 'bg-green-600 text-white'
-                    : 'bg-blue-600 text-white hover:bg-blue-700 active:scale-[0.99]'
-                }`}
-              >
-                <ShoppingBag className="w-5 h-5" />
-                {added ? 'কার্টে যুক্ত করা হয়েছে!' : 'কার্টে যোগ করুন'}
+            {/* কোয়ান্টিটি এবং অর্ডার বাটন */}
+            <div className="flex items-center gap-4 pt-2">
+              <div className="flex items-center border border-gray-300 rounded-md">
+                <button 
+                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                  className="px-3 py-2 text-gray-600 hover:bg-gray-100 font-bold"
+                >
+                  -
+                </button>
+                <span className="px-4 py-2 font-semibold text-gray-800">{quantity}</span>
+                <button 
+                  onClick={() => setQuantity(quantity + 1)}
+                  className="px-3 py-2 text-gray-600 hover:bg-gray-100 font-bold"
+                >
+                  +
+                </button>
+              </div>
+
+              <button className="flex-1 bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-md shadow transition text-lg text-center">
+                অর্ডার করুন
               </button>
             </div>
+
+            {/* মেটা ইনফো */}
+            <div className="border-t pt-4 text-xs text-gray-500 space-y-1">
+              <p><span className="font-semibold text-gray-700">SKU:</span> N/A</p>
+              <p><span className="font-semibold text-gray-700">Category:</span> Honey</p>
+            </div>
+
+            {/* ক্যাশ অন ডেলিভারি ফাস্ট ফরম */}
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 space-y-3 mt-6">
+              <h3 className="font-bold text-amber-900 text-sm">সহজে অর্ডার করতে আপনার তথ্য দিন:</h3>
+              <input type="text" placeholder="আপনার নাম" className="w-full px-3 py-2 text-sm border rounded focus:outline-none" />
+              <input type="text" placeholder="আপনার মোবাইল নম্বর" className="w-full px-3 py-2 text-sm border rounded focus:outline-none" />
+              <input type="text" placeholder="সম্পূর্ণ ঠিকানা" className="w-full px-3 py-2 text-sm border rounded focus:outline-none" />
+              <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 rounded text-sm transition">
+                অর্ডার নিশ্চিত করুন (৳{(weight === '500 GM' ? 700 : 1390) * quantity + 60})
+              </button>
+            </div>
+
           </div>
         </div>
       </main>
