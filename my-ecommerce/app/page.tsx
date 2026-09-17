@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 
 export default function ProductPage() {
@@ -6,7 +8,6 @@ export default function ProductPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
-      {/* ১. টপ কন্টাক্ট হেডার */}
       <header className="bg-white border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center space-x-2">
@@ -34,7 +35,6 @@ export default function ProductPage() {
           </div>
         </div>
 
-        {/* ক্যাটাগরি মেনু বার */}
         <nav className="bg-black text-white px-4 py-2 text-sm overflow-x-auto">
           <div className="max-w-7xl mx-auto flex space-x-6 whitespace-nowrap justify-center">
             {['Dry Fruits', 'Honey', 'Nuts', 'Oil', 'Pickle-Chutney', 'Seeds', 'Spice'].map((item, idx) => (
@@ -44,11 +44,9 @@ export default function ProductPage() {
         </nav>
       </header>
 
-      {/* ২. প্রোডাক্ট প্রধান সেকশন */}
       <main className="max-w-6xl mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-sm border p-6 grid md:grid-cols-2 gap-8 items-start">
           
-          {/* বামপাশ: প্রোডাক্ট ইমেজ */}
           <div className="flex justify-center bg-gray-50 p-6 rounded-xl border">
             <img 
               src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=600&q=80" 
@@ -57,7 +55,6 @@ export default function ProductPage() {
             />
           </div>
 
-          {/* ডানপাশ: প্রোডাক্ট ডিটেইলস */}
           <div className="space-y-6">
             <div>
               <h1 className="text-2xl md:text-3xl font-bold text-amber-700 leading-snug">
@@ -68,7 +65,6 @@ export default function ProductPage() {
               </p>
             </div>
 
-            {/* সাইজ / ওজন সিলেক্টর */}
             <div className="space-y-2">
               <label className="text-sm font-semibold text-gray-700">ওজন নির্বাচন করুন:</label>
               <div className="flex gap-3">
@@ -88,7 +84,6 @@ export default function ProductPage() {
               </div>
             </div>
 
-            {/* কোয়ান্টিটি এবং অর্ডার বাটন */}
             <div className="flex items-center gap-4 pt-2">
               <div className="flex items-center border border-gray-300 rounded-md">
                 <button 
@@ -111,13 +106,11 @@ export default function ProductPage() {
               </button>
             </div>
 
-            {/* মেটা ইনফো */}
             <div className="border-t pt-4 text-xs text-gray-500 space-y-1">
               <p><span className="font-semibold text-gray-700">SKU:</span> N/A</p>
               <p><span className="font-semibold text-gray-700">Category:</span> Honey</p>
             </div>
 
-            {/* ক্যাশ অন ডেলিভারি ফাস্ট ফরম */}
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 space-y-3 mt-6">
               <h3 className="font-bold text-amber-900 text-sm">সহজে অর্ডার করতে আপনার তথ্য দিন:</h3>
               <input type="text" placeholder="আপনার নাম" className="w-full px-3 py-2 text-sm border rounded focus:outline-none" />
